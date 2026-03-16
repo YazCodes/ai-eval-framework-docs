@@ -371,6 +371,14 @@ body {
   color: var(--text-muted);
   line-height: 1.5;
 }
+.card-notes-link {
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card-notes-link:hover {
+  text-decoration-thickness: 2px;
+}
 .card-owner {
   margin: 0;
   font-size: 0.8rem;

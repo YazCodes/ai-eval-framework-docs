@@ -6,34 +6,44 @@ export default function CurrentProjectsPage() {
       <h1>Current Projects</h1>
       <p>
         Central place for teams testing their AI tools. Each card links to the eval repo, dashboard, or
-        runbook. Add your project here when you start a new eval stream.
+        documentation. Add your project here when you start a new eval stream/idea.
       </p>
 
       <div className="project-grid">
         <ProjectCard
-          title="Chat summarization quality"
-          description="Eval for summarization accuracy, hallucination rate, and coherence on support chat logs."
-          href="/writing-a-new-eval/"
+          title="AI Eval Pipeline For JT"
+          description="Using historical user data to evaluate the accuracy of the AI pipeline."
+          href="https://github.com/JusticeAIUnit/justicetranscribe/tree/788-refactor-backend-to-allow-export-generate_full_crissa"
+          notes="Sharepoint link to project documentation."
+          notesHref="https://justiceuk.sharepoint.com/:w:/r/sites/JusticeAIUnit/_layouts/15/Doc.aspx?sourcedoc=%7B537F1805-8BD9-47BB-987A-664208958C3C%7D&file=JT%20System%20Evaluation%20Ideas.docx&action=default&mobileredirect=true"
           status="active"
-          owner="Support ML"
+          owner="Richard & Yasmin"
         />
         <ProjectCard
-          title="Code completion relevance"
-          description="Measures how often suggested completions are accepted and edited within a small delta."
-          status="active"
-          owner="DevEx"
-        />
-        <ProjectCard
-          title="Intent classification (NLU)"
-          description="Multi-label intent classification eval on annotated customer utterances; precision/recall/F1."
+          title="Transcription evaluation for Justice Transcribe (Courts)"
+          description="Evalutating the word of error rate in the transcriptions of the courts."
+          href='https://justiceuk-my.sharepoint.com/:w:/g/personal/harry_giddens_justice_gov_uk/IQAll5PzpHwrSZvACX2XZX0QAbzgBvIUCV2nsBnuM6xD05M?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1773667677147&web=1'
           status="beta"
-          owner="Conversational AI"
+          owner="Harry"
         />
         <ProjectCard
-          title="Document Q&A factual consistency"
-          description="Eval for retrieval-augmented Q&A: citation accuracy and factual consistency vs. source docs."
+          title="Probation Chatbot"
+          description="AI eval pipeline for the probation chatbot."
+          href="https://github.com/justiceuk/probation-chatbot/tree/main/eval"
+          status="active"
+          owner="Miranda"
+        />
+        <ProjectCard
+          title="Documenting the Future of Our AI Testing Framework"
+          description="Aiming for a collabrative library of evals and metrics for the Justice AI Unit."
           status="planned"
-          owner="Search"
+          owner="Justice AI Unit"
+        />
+         <ProjectCard
+          title="Eval Dataset For Prison Transcribe"
+          description="Aiming for a collabrative library of evals and metrics for the Justice AI Unit."
+          status="planned"
+          owner="Justice AI Unit"
         />
       </div>
 
