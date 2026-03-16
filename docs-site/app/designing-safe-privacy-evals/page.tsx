@@ -39,7 +39,7 @@ export default function DesigningSafePrivacyEvalsPage() {
         <tbody>
           <tr>
             <td>PII in datasets</td>
-            <td>Use synthetic data, redaction pipelines, or approved de-identified datasets only.</td>
+            <td>Use synthetic data, redaction pipelines, or approved de-identified datasets only. <br></br>If handling real data in code ensure you add those files to the .gitignore file.</td>
           </tr>
           <tr>
             <td>Model memorization / leakage</td>
@@ -52,6 +52,10 @@ export default function DesigningSafePrivacyEvalsPage() {
           <tr>
             <td>Third-party API exposure</td>
             <td>Do not send PII or confidential content to external APIs unless contractually and legally allowed.</td>
+          </tr>
+          <tr>
+            <td>Third-party testing libraries</td>
+            <td>Research what telemetry they use and any risks associated with the open source code.</td>
           </tr>
         </tbody>
       </table>
