@@ -8,11 +8,62 @@ export interface ProjectCardProps {
   href?: string;
   notes?: string;
   notesHref?: string;
+  notes2?: string;
+  notes2Href?: string;
   status?: 'active' | 'beta' | 'planned';
   owner?: string;
 }
 
-export function ProjectCard({ title, description, href, notes, notesHref, status = 'active', owner }: ProjectCardProps) {
+function DocLink({
+  label,
+  url,
+  cardHasHref,
+}: {
+  label: string;
+  url: string;
+  cardHasHref: boolean;
+}) {
+  if (cardHasHref) {
+    return (
+      <span
+        role="link"
+        tabIndex={0}
+        className="card-notes-link"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }}
+      >
+        {label}
+      </span>
+    );
+  }
+  return (
+    <Link href={url} target="_blank" rel="noopener noreferrer" className="card-notes-link">
+      {label}
+    </Link>
+  );
+}
+
+export function ProjectCard({
+  title,
+  description,
+  href,
+  notes,
+  notesHref,
+  notes2,
+  notes2Href,
+  status = 'active',
+  owner,
+}: ProjectCardProps) {
   const content = (
     <>
       <div className="card-header">
@@ -23,34 +74,15 @@ export function ProjectCard({ title, description, href, notes, notesHref, status
       {notes && (
         <p className="card-desc">
           {notesHref ? (
-            href ? (
-              <span
-                role="link"
-                tabIndex={0}
-                className="card-notes-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  window.open(notesHref, '_blank', 'noopener,noreferrer');
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(notesHref, '_blank', 'noopener,noreferrer');
-                  }
-                }}
-              >
-                {notes}
-              </span>
-            ) : (
-              <Link href={notesHref} target="_blank" rel="noopener noreferrer" className="card-notes-link">
-                {notes}
-              </Link>
-            )
+            <DocLink label={notes} url={notesHref} cardHasHref={!!href} />
           ) : (
             notes
           )}
+        </p>
+      )}
+      {notes2 && notes2Href && (
+        <p className="card-desc">
+          <DocLink label={notes2} url={notes2Href} cardHasHref={!!href} />
         </p>
       )}
       {owner && <p className="card-owner">Owner: {owner}</p>}

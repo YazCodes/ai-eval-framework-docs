@@ -5,8 +5,7 @@ export default function MetricsPage() {
     <div className="docs-content">
       <h1>Metrics</h1>
       <p>
-        Metrics turn model outputs and (optionally) ground truth into scores. This page lists built-in
-        metrics and how to add custom ones.
+        Read up on Metrics <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/metrics.md">here.</a> 
       </p>
 
       <h2>Built-in metrics</h2>

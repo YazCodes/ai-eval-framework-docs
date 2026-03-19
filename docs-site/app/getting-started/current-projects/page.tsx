@@ -14,8 +14,10 @@ export default function CurrentProjectsPage() {
           title="AI Eval Pipeline For JT"
           description="Using historical user data to evaluate the accuracy of the AI pipeline."
           href="https://github.com/JusticeAIUnit/justicetranscribe/tree/788-refactor-backend-to-allow-export-generate_full_crissa"
-          notes="Sharepoint link to project documentation."
+          notes="Project 1 - Evaluating multi-shots and One-shot CRISSA generation."
           notesHref="https://justiceuk.sharepoint.com/:w:/r/sites/JusticeAIUnit/_layouts/15/Doc.aspx?sourcedoc=%7B537F1805-8BD9-47BB-987A-664208958C3C%7D&file=JT%20System%20Evaluation%20Ideas.docx&action=default&mobileredirect=true"
+          notes2="Project 2 - Evaluating CRISSA outputs using different AI Models"
+          notes2Href="https://justiceuk.sharepoint.com/:w:/r/sites/JusticeAIUnit/_layouts/15/Doc.aspx?sourcedoc=%7BDA46390B-C091-4159-A7C6-D6B98810C18C%7D&file=Comparing%20CRISSA%20outputs%20using%20different%20AI%20Models%20-%20AI%20Evals%20JT%20project.docx&wdOrigin=TEAMS-MAGLEV.null_ns.rwc&action=default&mobileredirect=true"
           status="active"
           owner="Richard & Yasmin"
         />

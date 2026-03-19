@@ -57,6 +57,10 @@ export default function DesigningSafePrivacyEvalsPage() {
             <td>Third-party testing libraries</td>
             <td>Research what telemetry they use and any risks associated with the open source code.</td>
           </tr>
+          <tr>
+            <td>Outdated test datasets</td>
+            <td>Datasets should be continuously updated to ensure that any updates in the model or changes in user or business needs do not negatively affect the quality of the generated output.</td>
+          </tr>
         </tbody>
       </table>
 
