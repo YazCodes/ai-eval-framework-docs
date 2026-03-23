@@ -1,7 +1,10 @@
 import { Callout } from '@/components/Callout';
 import { Checklist } from '@/components/Checklist';
+import { getBasePath } from '@/lib/nav';
 
 export default function DesigningSafePrivacyEvalsPage() {
+  const base = getBasePath().replace(/\/$/, '');
+  const aiSecurityAndEvalsDocHref = `${base}/presentations/AI-Security-and-Evals-Shipping-Faster-with-Confidence.pdf`;
   return (
     <div className="docs-content">
       <h1>Designing Safe and Privacy-Aware Evaluations</h1>
@@ -10,9 +13,11 @@ export default function DesigningSafePrivacyEvalsPage() {
         design evaluations that are safe to run, respect privacy, and avoid leaking PII or confidential data.
       </p>
 
+      <p>Check out these docs to gain an insight into the principles and risks of designing safe and privacy-aware evaluations <a href={aiSecurityAndEvalsDocHref} download>AI-Security-and-Evals-Shipping-Faster-with-Confidence.pdf</a></p>
+
       <h2>Principles</h2>
       <ul>
-        <li><strong>Minimize</strong> — Use the least amount of data necessary; prefer synthetic or anonymized when possible.</li>
+        <li><strong>Minimise</strong> — Use the least amount of data necessary; prefer synthetic or anonymised when possible.</li>
         <li><strong>Contain</strong> — Run evals in controlled environments; avoid logging or storing raw inputs/outputs unless required.</li>
         <li><strong>Govern</strong> — Document data sources, retention, and who may access eval results.</li>
       </ul>
@@ -42,7 +47,7 @@ export default function DesigningSafePrivacyEvalsPage() {
             <td>Use synthetic data, redaction pipelines, or approved de-identified datasets only. <br></br>If handling real data in code ensure you add those files to the .gitignore file.</td>
           </tr>
           <tr>
-            <td>Model memorization / leakage</td>
+            <td>Model memorisation / leakage</td>
             <td>Avoid training on eval data; use held-out or external test sets.</td>
           </tr>
           <tr>
@@ -69,15 +74,6 @@ export default function DesigningSafePrivacyEvalsPage() {
         regulations (e.g. GDPR, CCPA). When in doubt, consult your privacy or legal team.
       </Callout>
 
-      <h2>Example: safe logging</h2>
-      <p>Log only IDs and aggregate scores, not raw text:</p>
-      <pre>
-        <code>{`# Prefer
-logger.info("eval_complete", {"eval_id": "my_eval", "n": 100, "exact_match": 0.82})
-
-# Avoid
-logger.info("example", {"prompt": user_input, "prediction": model_output})  # may contain PII`}</code>
-      </pre>
     </div>
   );
 }

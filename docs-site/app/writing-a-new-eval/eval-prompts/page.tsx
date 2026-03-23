@@ -1,6 +1,3 @@
-import { Callout } from '@/components/Callout';
-import { Checklist } from '@/components/Checklist';
-
 export default function EvalPromptsPage() {
   return (
     <div className="docs-content">
@@ -161,6 +158,13 @@ export default function EvalPromptsPage() {
         `}</code>
       </pre>
 
+      <h3>Picking a LLM judge model guidence</h3>
+      <ul>
+        <li>Use a strong reasoning model</li>
+        <li>Pick one at least as capable as the model being evaluated</li>
+        <li>Ensure reliable instruction-following</li>
+        <li>Aim for consistent, low-variance outputs</li>
+      </ul>
     </div>
   );
 }
