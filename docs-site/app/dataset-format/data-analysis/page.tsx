@@ -1,7 +1,7 @@
 export default function DataAnalysisPage() {
     return (
       <div className="docs-content">
-        <h1>Analysing your data</h1>
+        <h1>Analysing Your Data</h1>
         <p>
           Once you have extracted your data you can start getting insights, any emerging patterns or trends in your data.
           This information can help you understand more about your users, their needs, any new issues that may have arisen and how well your model is performing.

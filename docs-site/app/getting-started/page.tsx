@@ -5,8 +5,7 @@ export default function GettingStartedPage() {
     <div className="docs-content">
       <h1>Getting Started</h1>
       <p>
-        New to the AI Evaluation Framework? Start here to understand our definition of done and see how other
-        teams are running evals.
+        New to the AI Evaluation Framework? Start here to understand our definition of done and see how other projects within the Justice AI Unit are running evals.
       </p>
       <h2>What are AI evals?</h2>
       <p>AI evals are a way to evaluate the performance of AI systems. They are used to evaluate the performance of AI systems in production and help us to improve the performance of AI systems.

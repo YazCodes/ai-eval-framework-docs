@@ -3,7 +3,7 @@ import { ProjectCard } from '@/components/ProjectCard';
 export default function CurrentProjectsPage() {
   return (
     <div className="docs-content">
-      <h1>Current EvalProjects</h1>
+      <h1>Current Eval Projects</h1>
       <p>
         Central place for teams testing their AI tools. Each card links to the eval repo, dashboard, or
         documentation. Add your project here when you start a new eval stream/idea.

@@ -4,21 +4,16 @@ export default function DatasetFormatPage() {
   return (
     <div className="docs-content">
       <h1>Golden Dataset</h1>
-      <p> Need to create datasets for eval testing? Read up on how to create a golden dataset <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">here.</a></p>
-      <h1>What to consider when using real data for eval testing?</h1>
-      <p>When using real data for eval testing, there are a few things to consider:</p>
-      <ul>
-        <li>Creating an ETL (Extract, Transform, Load) script to extract the data from the database and format it into a JSONL/CSV file ready for evaluation.</li>
-        <li>You can find examples of ETL scripts used in JT <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">here.</a></li>
-        <li>Data Privacy: The data is sensitive and needs to be handled with care. The location of the extracted data in your dataset should be stored in a .gitignore file to avoid any accidental leaks.</li>
-      </ul>
-      <h1>Dataset Ready for Evals</h1>
+      <p></p>
+      <p> Need to create datasets for eval testing? <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">Read up on our teams documentation to create a golden dataset</a></p>
+      <h1>Datasets Ready for Evals</h1>
       <p> Here you can find a wide range of datasets ready for evaluation.</p>
       <ul>
         <li> <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">Audio Transcription Datasets</a></li>
         <li> <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">Language Model Datasets</a></li>
         <li> <a href="https://github.com/JusticeAIUnit/dev-docs/blob/main/docs/evals/datasets.md">Transcription Datasets</a></li>  
       </ul>
+      <p><strong>Important:</strong> When using third party dataset ensure you do research on any potential risks associated with the dataset and develop mitigations against them. These can carry data risks of indirect prompt injections.</p>
       <h1>Dataset Format</h1>
       <p>
         All eval datasets are JSONL (one JSON object per line). Each line must include an <code>id</code> and

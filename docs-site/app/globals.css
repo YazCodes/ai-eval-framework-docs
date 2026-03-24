@@ -151,6 +151,12 @@ body {
   margin: 2rem 0;
 }
 
+.docs-content .docs-figure {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

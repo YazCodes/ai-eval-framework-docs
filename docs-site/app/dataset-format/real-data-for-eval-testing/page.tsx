@@ -17,8 +17,8 @@ export default function RealDataForEvalTestingPage() {
       </p>
 
       <p>
-        <strong>Important:</strong> keep data extracted by the ETL in paths covered by <code>.gitignore</code>{' '}
-        to avoid accidental leaks.
+        <strong>Important:</strong> Keep data extracted by the ETL scripts in paths covered by <code>.gitignore</code> files{' '}
+        to avoid accidental leaks of sensitive data.
       </p>
    
     

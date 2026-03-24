@@ -14,6 +14,7 @@ export default function EvalDashboardPage() {
       <ul>
         <li>Jupyter Notebooks</li>
         <li>Streamlit</li>
+        <li>Quarto</li>
       </ul>
 
       <h2>Notebook Examples</h2>
