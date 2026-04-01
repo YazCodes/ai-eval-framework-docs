@@ -27,6 +27,7 @@ export const navItems: NavItem[] = [
       { title: 'Data analysis', href: '/dataset-format/data-analysis/' },
     ],
   },
+  { title: 'Deploying Your Model', href: '/deploying-your-model/' },
   { title: 'Designing Safe and Privacy-Aware Evaluations', href: '/designing-safe-privacy-evals/' ,
     children: [
       { title: 'Trust Boundaries', href: '/designing-safe-privacy-evals/trust-boundaries/' },
